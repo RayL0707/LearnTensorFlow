@@ -102,6 +102,8 @@ if __name__ == '__main__':
     # sess.run(tf.initialize_all_variables()) # tf old version
     # new way to initialize
     sess.run(tf.global_variables_initializer())
+    plt.ion()   # get continues plot
+    plt.show()
 
     # train 200 times
     for i in range(200):
@@ -123,6 +125,11 @@ if __name__ == '__main__':
         _, cost, state, pred = sess.run(
             [model.train_op, model.cost, model.cell_final_state, model.pred],
             feed_dict=feed_dict)
+        # plotting
+        plt.plot(xs[0, :], res[0].flatten(), 'r', xs[0, :], pred.flatten()[:TIME_STEPS], 'b--')
+        plt.ylim((-1.2, 1.2))
+        plt.draw()
+        plt.pause(0.3)
 
         # print outcome
         if i % 20 == 0:
