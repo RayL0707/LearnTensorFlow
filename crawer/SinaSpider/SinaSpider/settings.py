@@ -14,7 +14,8 @@ BOT_NAME = 'SinaSpider'
 SPIDER_MODULES = ['SinaSpider.spiders']
 NEWSPIDER_MODULE = 'SinaSpider.spiders'
 
-
+LOG_FILE = "sinaSpider.log"
+LOG_LEVEL = "ERROR"
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'SinaSpider (+http://www.yourdomain.com)'
 
@@ -64,9 +65,9 @@ DOWNLOAD_DELAY = 1.25
 
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'SinaSpider.pipelines.SinaspiderPipeline': 300,
-#}
+ITEM_PIPELINES = {
+   'SinaSpider.pipelines.SinaspiderPipeline': 300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html

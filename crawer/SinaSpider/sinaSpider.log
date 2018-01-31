@@ -1,0 +1,640 @@
+2018-01-26 16:33:25 [scrapy.core.scraper] ERROR: Spider error processing <GET http://roll.finance.sina.com.cn/finance/zq1/gsjsy/index.shtml> (referer: http://finance.sina.com.cn/stock/)
+Traceback (most recent call last):
+  File "/Users/ronglei/Documents/worksplace/DL/crawer/SinaSpider/SinaSpider/spiders/sinaSpider.py", line 42, in parse_post
+    item['title'] = response.xpath('//h1[@class="main-title"]')[0].text
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/parsel/selector.py", line 61, in __getitem__
+    o = super(SelectorList, self).__getitem__(pos)
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/ronglei/Documents/worksplace/DL/crawer/SinaSpider/SinaSpider/spiders/sinaSpider.py", line 50, in parse_post
+    except err:
+NameError: name 'err' is not defined
+2018-01-26 16:51:12 [scrapy.core.scraper] ERROR: Spider error processing <GET http://roll.finance.sina.com.cn/finance/zq1/gsjsy/index.shtml> (referer: http://finance.sina.com.cn/stock/)
+Traceback (most recent call last):
+  File "/Users/ronglei/Documents/worksplace/DL/crawer/SinaSpider/SinaSpider/spiders/sinaSpider.py", line 46, in parse_post
+    item['title'] = html.xpath('//h1[@class="main-title"]')[0].text
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/ronglei/Documents/worksplace/DL/crawer/SinaSpider/SinaSpider/spiders/sinaSpider.py", line 57, in parse_post
+    with open(filename, 'wr') as f:
+ValueError: must have exactly one of create/read/write/append mode
+2018-01-26 16:51:39 [scrapy.core.scraper] ERROR: Spider error processing <GET http://finance.sina.com.cn/focus/lswy/> (referer: http://finance.sina.com.cn/stock/)
+Traceback (most recent call last):
+  File "/Users/ronglei/Documents/worksplace/DL/crawer/SinaSpider/SinaSpider/spiders/sinaSpider.py", line 46, in parse_post
+    item['title'] = html.xpath('//h1[@class="main-title"]')[0].text
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/ronglei/Documents/worksplace/DL/crawer/SinaSpider/SinaSpider/spiders/sinaSpider.py", line 57, in parse_post
+    with open(filename, 'wr') as f:
+ValueError: must have exactly one of create/read/write/append mode
+2018-01-26 16:51:40 [scrapy.core.scraper] ERROR: Spider error processing <GET http://vip.stock.finance.sina.com.cn/q/go.php/vIR_CustomSearch/index.phtml> (referer: http://finance.sina.com.cn/stock/)
+Traceback (most recent call last):
+  File "/Users/ronglei/Documents/worksplace/DL/crawer/SinaSpider/SinaSpider/spiders/sinaSpider.py", line 46, in parse_post
+    item['title'] = html.xpath('//h1[@class="main-title"]')[0].text
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/ronglei/Documents/worksplace/DL/crawer/SinaSpider/SinaSpider/spiders/sinaSpider.py", line 57, in parse_post
+    with open(filename, 'wr') as f:
+ValueError: must have exactly one of create/read/write/append mode
+2018-01-26 16:51:42 [scrapy.core.scraper] ERROR: Spider error processing <GET http://vip.stock.finance.sina.com.cn/q/go.php/vInvestConsult/kind/lhb/index.phtml> (referer: http://finance.sina.com.cn/stock/)
+Traceback (most recent call last):
+  File "/Users/ronglei/Documents/worksplace/DL/crawer/SinaSpider/SinaSpider/spiders/sinaSpider.py", line 46, in parse_post
+    item['title'] = html.xpath('//h1[@class="main-title"]')[0].text
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/ronglei/Documents/worksplace/DL/crawer/SinaSpider/SinaSpider/spiders/sinaSpider.py", line 57, in parse_post
+    with open(filename, 'wr') as f:
+ValueError: must have exactly one of create/read/write/append mode
+2018-01-26 16:51:42 [scrapy.core.scraper] ERROR: Spider error processing <GET http://finance.sina.com.cn/blog/8.html> (referer: http://finance.sina.com.cn/stock/)
+Traceback (most recent call last):
+  File "/Users/ronglei/Documents/worksplace/DL/crawer/SinaSpider/SinaSpider/spiders/sinaSpider.py", line 46, in parse_post
+    item['title'] = html.xpath('//h1[@class="main-title"]')[0].text
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/ronglei/Documents/worksplace/DL/crawer/SinaSpider/SinaSpider/spiders/sinaSpider.py", line 57, in parse_post
+    with open(filename, 'wr') as f:
+ValueError: must have exactly one of create/read/write/append mode
+2018-01-26 16:51:43 [scrapy.core.scraper] ERROR: Spider error processing <GET http://live.finance.sina.com.cn/bozhu/3127741354/26394> (referer: http://finance.sina.com.cn/stock/)
+Traceback (most recent call last):
+  File "/Users/ronglei/Documents/worksplace/DL/crawer/SinaSpider/SinaSpider/spiders/sinaSpider.py", line 46, in parse_post
+    item['title'] = html.xpath('//h1[@class="main-title"]')[0].text
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/ronglei/Documents/worksplace/DL/crawer/SinaSpider/SinaSpider/spiders/sinaSpider.py", line 57, in parse_post
+    with open(filename, 'wr') as f:
+ValueError: must have exactly one of create/read/write/append mode
+2018-01-26 16:51:44 [scrapy.core.scraper] ERROR: Spider error processing <GET http://finance.sina.com.cn/zl/stock/2018-01-26/zl-ifyqzcxf9072706.shtml> (referer: http://finance.sina.com.cn/stock/)
+Traceback (most recent call last):
+  File "/Users/ronglei/Documents/worksplace/DL/crawer/SinaSpider/SinaSpider/spiders/sinaSpider.py", line 46, in parse_post
+    item['title'] = html.xpath('//h1[@class="main-title"]')[0].text
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/ronglei/Documents/worksplace/DL/crawer/SinaSpider/SinaSpider/spiders/sinaSpider.py", line 57, in parse_post
+    with open(filename, 'wr') as f:
+ValueError: must have exactly one of create/read/write/append mode
+2018-01-26 16:51:44 [scrapy.core.scraper] ERROR: Spider error processing <GET http://live.finance.sina.com.cn/bozhu/6195830315/26374> (referer: http://finance.sina.com.cn/stock/)
+Traceback (most recent call last):
+  File "/Users/ronglei/Documents/worksplace/DL/crawer/SinaSpider/SinaSpider/spiders/sinaSpider.py", line 46, in parse_post
+    item['title'] = html.xpath('//h1[@class="main-title"]')[0].text
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/ronglei/Documents/worksplace/DL/crawer/SinaSpider/SinaSpider/spiders/sinaSpider.py", line 57, in parse_post
+    with open(filename, 'wr') as f:
+ValueError: must have exactly one of create/read/write/append mode
+2018-01-26 16:51:46 [scrapy.core.scraper] ERROR: Spider error processing <GET http://live.finance.sina.com.cn/> (referer: http://finance.sina.com.cn/stock/)
+Traceback (most recent call last):
+  File "/Users/ronglei/Documents/worksplace/DL/crawer/SinaSpider/SinaSpider/spiders/sinaSpider.py", line 46, in parse_post
+    item['title'] = html.xpath('//h1[@class="main-title"]')[0].text
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/ronglei/Documents/worksplace/DL/crawer/SinaSpider/SinaSpider/spiders/sinaSpider.py", line 57, in parse_post
+    with open(filename, 'wr') as f:
+ValueError: must have exactly one of create/read/write/append mode
+2018-01-26 16:51:51 [scrapy.core.scraper] ERROR: Spider error processing <GET http://finance.sina.com.cn/zt_d/ggls/> (referer: http://finance.sina.com.cn/stock/)
+Traceback (most recent call last):
+  File "/Users/ronglei/Documents/worksplace/DL/crawer/SinaSpider/SinaSpider/spiders/sinaSpider.py", line 46, in parse_post
+    item['title'] = html.xpath('//h1[@class="main-title"]')[0].text
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/ronglei/Documents/worksplace/DL/crawer/SinaSpider/SinaSpider/spiders/sinaSpider.py", line 57, in parse_post
+    with open(filename, 'wr') as f:
+ValueError: must have exactly one of create/read/write/append mode
+2018-01-26 16:51:51 [scrapy.core.scraper] ERROR: Spider error processing <GET http://finance.sina.com.cn/stock/hkstock/> (referer: http://finance.sina.com.cn/stock/)
+Traceback (most recent call last):
+  File "/Users/ronglei/Documents/worksplace/DL/crawer/SinaSpider/SinaSpider/spiders/sinaSpider.py", line 46, in parse_post
+    item['title'] = html.xpath('//h1[@class="main-title"]')[0].text
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/ronglei/Documents/worksplace/DL/crawer/SinaSpider/SinaSpider/spiders/sinaSpider.py", line 57, in parse_post
+    with open(filename, 'wr') as f:
+ValueError: must have exactly one of create/read/write/append mode
+2018-01-26 16:51:51 [scrapy.core.scraper] ERROR: Spider error processing <GET http://roll.finance.sina.com.cn/finance/zq1/gsjsy/index.shtml> (referer: http://finance.sina.com.cn/stock/)
+Traceback (most recent call last):
+  File "/Users/ronglei/Documents/worksplace/DL/crawer/SinaSpider/SinaSpider/spiders/sinaSpider.py", line 46, in parse_post
+    item['title'] = html.xpath('//h1[@class="main-title"]')[0].text
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/ronglei/Documents/worksplace/DL/crawer/SinaSpider/SinaSpider/spiders/sinaSpider.py", line 57, in parse_post
+    with open(filename, 'wr') as f:
+ValueError: must have exactly one of create/read/write/append mode
+2018-01-26 16:51:53 [scrapy.core.scraper] ERROR: Spider error processing <GET http://finance.sina.com.cn/money/smjj/smdt/2018-01-26/doc-ifyqyesy1690743.shtml> (referer: http://finance.sina.com.cn/stock/)
+Traceback (most recent call last):
+  File "/Users/ronglei/Documents/worksplace/DL/crawer/SinaSpider/SinaSpider/spiders/sinaSpider.py", line 48, in parse_post
+    item['source'] = basicINFO.xpath('//span[@class="source ent-source"]')[0].text
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/ronglei/Documents/worksplace/DL/crawer/SinaSpider/SinaSpider/spiders/sinaSpider.py", line 57, in parse_post
+    with open(filename, 'wr') as f:
+ValueError: must have exactly one of create/read/write/append mode
+2018-01-26 16:51:54 [scrapy.core.scraper] ERROR: Spider error processing <GET http://roll.finance.sina.com.cn/finance/zq1/gjyd/index.shtml> (referer: http://finance.sina.com.cn/stock/)
+Traceback (most recent call last):
+  File "/Users/ronglei/Documents/worksplace/DL/crawer/SinaSpider/SinaSpider/spiders/sinaSpider.py", line 46, in parse_post
+    item['title'] = html.xpath('//h1[@class="main-title"]')[0].text
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/ronglei/Documents/worksplace/DL/crawer/SinaSpider/SinaSpider/spiders/sinaSpider.py", line 57, in parse_post
+    with open(filename, 'wr') as f:
+ValueError: must have exactly one of create/read/write/append mode
+2018-01-26 16:51:56 [scrapy.core.scraper] ERROR: Spider error processing <GET http://finance.sina.com.cn/roll/2018-01-26/doc-ifyqyqni2970127.shtml> (referer: http://finance.sina.com.cn/stock/)
+Traceback (most recent call last):
+  File "/Users/ronglei/Documents/worksplace/DL/crawer/SinaSpider/SinaSpider/spiders/sinaSpider.py", line 48, in parse_post
+    item['source'] = basicINFO.xpath('//span[@class="source ent-source"]')[0].text
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/ronglei/Documents/worksplace/DL/crawer/SinaSpider/SinaSpider/spiders/sinaSpider.py", line 57, in parse_post
+    with open(filename, 'wr') as f:
+ValueError: must have exactly one of create/read/write/append mode
+2018-01-26 16:51:57 [scrapy.core.scraper] ERROR: Spider error processing <GET http://finance.sina.com.cn/fund/> (referer: http://finance.sina.com.cn/stock/)
+Traceback (most recent call last):
+  File "/Users/ronglei/Documents/worksplace/DL/crawer/SinaSpider/SinaSpider/spiders/sinaSpider.py", line 46, in parse_post
+    item['title'] = html.xpath('//h1[@class="main-title"]')[0].text
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/ronglei/Documents/worksplace/DL/crawer/SinaSpider/SinaSpider/spiders/sinaSpider.py", line 57, in parse_post
+    with open(filename, 'wr') as f:
+ValueError: must have exactly one of create/read/write/append mode
+2018-01-26 16:51:58 [scrapy.core.scraper] ERROR: Spider error processing <GET http://finance.sina.com.cn/stock/thirdmarket/2018-01-25/doc-ifyqyesy1753866.shtml> (referer: http://finance.sina.com.cn/stock/)
+Traceback (most recent call last):
+  File "/Users/ronglei/Documents/worksplace/DL/crawer/SinaSpider/SinaSpider/spiders/sinaSpider.py", line 48, in parse_post
+    item['source'] = basicINFO.xpath('//span[@class="source ent-source"]')[0].text
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/ronglei/Documents/worksplace/DL/crawer/SinaSpider/SinaSpider/spiders/sinaSpider.py", line 57, in parse_post
+    with open(filename, 'wr') as f:
+ValueError: must have exactly one of create/read/write/append mode
+2018-01-26 16:51:59 [scrapy.core.scraper] ERROR: Spider error processing <GET http://roll.finance.sina.com.cn/finance/zq1/ssgs/index.shtml> (referer: http://finance.sina.com.cn/stock/)
+Traceback (most recent call last):
+  File "/Users/ronglei/Documents/worksplace/DL/crawer/SinaSpider/SinaSpider/spiders/sinaSpider.py", line 46, in parse_post
+    item['title'] = html.xpath('//h1[@class="main-title"]')[0].text
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/ronglei/Documents/worksplace/DL/crawer/SinaSpider/SinaSpider/spiders/sinaSpider.py", line 57, in parse_post
+    with open(filename, 'wr') as f:
+ValueError: must have exactly one of create/read/write/append mode
+2018-01-26 16:52:00 [scrapy.core.scraper] ERROR: Spider error processing <GET http://finance.sina.com.cn/stock/thirdmarket/> (referer: http://finance.sina.com.cn/stock/)
+Traceback (most recent call last):
+  File "/Users/ronglei/Documents/worksplace/DL/crawer/SinaSpider/SinaSpider/spiders/sinaSpider.py", line 46, in parse_post
+    item['title'] = html.xpath('//h1[@class="main-title"]')[0].text
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/ronglei/Documents/worksplace/DL/crawer/SinaSpider/SinaSpider/spiders/sinaSpider.py", line 57, in parse_post
+    with open(filename, 'wr') as f:
+ValueError: must have exactly one of create/read/write/append mode
+2018-01-26 16:52:02 [scrapy.core.scraper] ERROR: Spider error processing <GET http://finance.sina.com.cn/stock/> (referer: http://finance.sina.com.cn/stock/)
+Traceback (most recent call last):
+  File "/Users/ronglei/Documents/worksplace/DL/crawer/SinaSpider/SinaSpider/spiders/sinaSpider.py", line 46, in parse_post
+    item['title'] = html.xpath('//h1[@class="main-title"]')[0].text
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/ronglei/Documents/worksplace/DL/crawer/SinaSpider/SinaSpider/spiders/sinaSpider.py", line 57, in parse_post
+    with open(filename, 'wr') as f:
+ValueError: must have exactly one of create/read/write/append mode
+2018-01-26 16:52:06 [scrapy.core.scraper] ERROR: Spider error processing <GET http://finance.sina.com.cn/stock/s/2018-01-26/doc-ifyqyesy2390717.shtml> (referer: http://finance.sina.com.cn/stock/)
+Traceback (most recent call last):
+  File "/Users/ronglei/Documents/worksplace/DL/crawer/SinaSpider/SinaSpider/spiders/sinaSpider.py", line 48, in parse_post
+    item['source'] = basicINFO.xpath('//span[@class="source ent-source"]')[0].text
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/ronglei/Documents/worksplace/DL/crawer/SinaSpider/SinaSpider/spiders/sinaSpider.py", line 57, in parse_post
+    with open(filename, 'wr') as f:
+ValueError: must have exactly one of create/read/write/append mode
+2018-01-26 16:52:07 [scrapy.core.scraper] ERROR: Spider error processing <GET http://vip.stock.finance.sina.com.cn/q/go.php/vInvestConsult/kind/jyts/index.phtml?tradedate=2018-01-26> (referer: http://finance.sina.com.cn/stock/)
+Traceback (most recent call last):
+  File "/Users/ronglei/Documents/worksplace/DL/crawer/SinaSpider/SinaSpider/spiders/sinaSpider.py", line 46, in parse_post
+    item['title'] = html.xpath('//h1[@class="main-title"]')[0].text
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/ronglei/Documents/worksplace/DL/crawer/SinaSpider/SinaSpider/spiders/sinaSpider.py", line 57, in parse_post
+    with open(filename, 'wr') as f:
+ValueError: must have exactly one of create/read/write/append mode
+2018-01-26 16:52:14 [scrapy.core.scraper] ERROR: Spider error processing <GET http://finance.sina.com.cn/zt_d/bqlzwnt/> (referer: http://finance.sina.com.cn/stock/)
+Traceback (most recent call last):
+  File "/Users/ronglei/Documents/worksplace/DL/crawer/SinaSpider/SinaSpider/spiders/sinaSpider.py", line 46, in parse_post
+    item['title'] = html.xpath('//h1[@class="main-title"]')[0].text
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/ronglei/Documents/worksplace/DL/crawer/SinaSpider/SinaSpider/spiders/sinaSpider.py", line 57, in parse_post
+    with open(filename, 'wr') as f:
+ValueError: must have exactly one of create/read/write/append mode
+2018-01-26 16:52:17 [scrapy.core.scraper] ERROR: Spider error processing <GET http://finance.sina.com.cn/stock/s/2018-01-26/doc-ifyqyesy2381610.shtml> (referer: http://finance.sina.com.cn/stock/)
+Traceback (most recent call last):
+  File "/Users/ronglei/Documents/worksplace/DL/crawer/SinaSpider/SinaSpider/spiders/sinaSpider.py", line 48, in parse_post
+    item['source'] = basicINFO.xpath('//span[@class="source ent-source"]')[0].text
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/ronglei/Documents/worksplace/DL/crawer/SinaSpider/SinaSpider/spiders/sinaSpider.py", line 57, in parse_post
+    with open(filename, 'wr') as f:
+ValueError: must have exactly one of create/read/write/append mode
+2018-01-26 16:52:23 [scrapy.core.scraper] ERROR: Spider error processing <GET http://finance.sina.com.cn/zt_d/201712quanshangapp/> (referer: http://finance.sina.com.cn/stock/)
+Traceback (most recent call last):
+  File "/Users/ronglei/Documents/worksplace/DL/crawer/SinaSpider/SinaSpider/spiders/sinaSpider.py", line 46, in parse_post
+    item['title'] = html.xpath('//h1[@class="main-title"]')[0].text
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/ronglei/Documents/worksplace/DL/crawer/SinaSpider/SinaSpider/spiders/sinaSpider.py", line 57, in parse_post
+    with open(filename, 'wr') as f:
+ValueError: must have exactly one of create/read/write/append mode
+2018-01-26 16:52:25 [scrapy.core.scraper] ERROR: Spider error processing <GET http://finance.sina.com.cn/zt_d/zbscyxzpj/> (referer: http://finance.sina.com.cn/stock/)
+Traceback (most recent call last):
+  File "/Users/ronglei/Documents/worksplace/DL/crawer/SinaSpider/SinaSpider/spiders/sinaSpider.py", line 46, in parse_post
+    item['title'] = html.xpath('//h1[@class="main-title"]')[0].text
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/ronglei/Documents/worksplace/DL/crawer/SinaSpider/SinaSpider/spiders/sinaSpider.py", line 57, in parse_post
+    with open(filename, 'wr') as f:
+ValueError: must have exactly one of create/read/write/append mode
+2018-01-26 16:52:26 [scrapy.core.scraper] ERROR: Spider error processing <GET http://finance.sina.com.cn/stock/s/2018-01-26/doc-ifyqyesy1736564.shtml> (referer: http://finance.sina.com.cn/stock/)
+Traceback (most recent call last):
+  File "/Users/ronglei/Documents/worksplace/DL/crawer/SinaSpider/SinaSpider/spiders/sinaSpider.py", line 48, in parse_post
+    item['source'] = basicINFO.xpath('//span[@class="source ent-source"]')[0].text
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/ronglei/Documents/worksplace/DL/crawer/SinaSpider/SinaSpider/spiders/sinaSpider.py", line 57, in parse_post
+    with open(filename, 'wr') as f:
+ValueError: must have exactly one of create/read/write/append mode
+2018-01-26 16:52:36 [scrapy.core.scraper] ERROR: Spider error processing <GET http://finance.sina.com.cn/stock/jsy/2018-01-26/doc-ifyqzcxf8723215.shtml> (referer: http://finance.sina.com.cn/stock/)
+Traceback (most recent call last):
+  File "/Users/ronglei/Documents/worksplace/DL/crawer/SinaSpider/SinaSpider/spiders/sinaSpider.py", line 48, in parse_post
+    item['source'] = basicINFO.xpath('//span[@class="source ent-source"]')[0].text
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/ronglei/anaconda2/envs/py36/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/ronglei/Documents/worksplace/DL/crawer/SinaSpider/SinaSpider/spiders/sinaSpider.py", line 57, in parse_post
+    with open(filename, 'wr') as f:
+ValueError: must have exactly one of create/read/write/append mode

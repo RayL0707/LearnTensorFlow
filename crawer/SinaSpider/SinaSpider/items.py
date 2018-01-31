@@ -11,4 +11,10 @@ import scrapy
 class SinaspiderItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
+    title = scrapy.Field()
+    source = scrapy.Field()
+    date = scrapy.Field()
+    content = scrapy.Field()
+    keywords = scrapy.Field()
+    url = scrapy.Field()
     pass
